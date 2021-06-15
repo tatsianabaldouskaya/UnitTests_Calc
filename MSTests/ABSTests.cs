@@ -4,29 +4,25 @@ using System;
 namespace MSTests
 {
     [TestClass]
-    public class ABSTests
+    public class ABSTests:BaseTest
     {
         [TestInitialize]
         public void TestInit()
         {
-            System.Console.WriteLine("Starting ABS tests");
-
+            Console.WriteLine("Starting ABS tests");
         }
 
         [TestCleanup]
         public void TestClean()
         {
-            System.Console.WriteLine("ABS tests are finished");
+            Console.WriteLine("ABS tests are finished");
         }
-
 
         [TestMethod]
         [DataRow(-4)]
         public void ABSNegativeNumberTest(double negativeNumber)
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(-negativeNumber, calc.Abs(negativeNumber));
-
+            Assert.AreEqual(-negativeNumber, calc.Abs(negativeNumber), "ABS is incorrect");
         }
 
         [TestMethod]
@@ -34,15 +30,14 @@ namespace MSTests
         public void ABSPositiveNumberTest(double positiveNumber)
         {
             var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(positiveNumber, calc.Abs(positiveNumber));
+            Assert.AreEqual(positiveNumber, calc.Abs(positiveNumber), "ABS is incorrect");
         }
 
         [TestMethod]
         public void ABSZeroTest()
         {
             var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(0, calc.Abs(0));
-
+            Assert.AreEqual(0, calc.Abs(0), "ABS is incorrect");
         }
     }
 }

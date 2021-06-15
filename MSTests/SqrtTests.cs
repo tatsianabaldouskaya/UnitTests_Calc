@@ -3,34 +3,27 @@ using System;
 
 namespace MSTests
 {
-
     [TestClass]
-    public class SqrtTests
+    public class SqrtTests:BaseTest
     {
-
-
         [TestMethod]
         public void SqrtOfPositiveNumberTest()
         {
             object number = "4";
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(2, calc.Sqrt(number));
+            Assert.AreEqual(2, calc.Sqrt(number), "Sqrt is incorrect");
         }
 
         [TestMethod]
         public void SqrtOfZeroTest()
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(0, calc.Sqrt(0));
+            Assert.AreEqual(0, calc.Sqrt(0), "Sqrt is incorrect");
         }
 
         [TestMethod]
         [ExpectedException(typeof(NotFiniteNumberException))]
         public void SqrtOfNegativeNumberImpossibleTest()
         {
-            var calc = new CSharpCalculator.Calculator();
             calc.Sqrt(-4);
         }
-
     }
 }

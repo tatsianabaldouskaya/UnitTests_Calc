@@ -4,16 +4,12 @@ using System;
 namespace MSTests
 {
     [TestClass]
-    public class SinTests
+    public class SinTests:BaseTest
     {
-
-
         [TestMethod]
         public void SinTest()
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(Math.Sin(60), calc.Sin("60"));
-
+            Assert.AreEqual(Math.Sin(60), calc.Sin("60"), "Sin is incorrect");
         }
     }
 }

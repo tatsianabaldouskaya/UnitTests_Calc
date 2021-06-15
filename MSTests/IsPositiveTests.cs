@@ -4,22 +4,19 @@ using System;
 namespace MSTests
 {
     [TestClass]
-    public class IsPositiveTests
+    public class IsPositiveTests:BaseTest
     {
-
         [TestMethod]
         [DataRow(2)]
         public void IsPositiveTest(int number)
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.IsTrue(calc.isPositive(number));
+            Assert.IsTrue(calc.isPositive(number),"Number is not positive");
         }
 
         [TestMethod]
         public void ZeroIsNotPositiveTest()
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.IsFalse(calc.isPositive(0));
+            Assert.IsFalse(calc.isPositive(0), "Zero is positive");
         }
     }
 }
