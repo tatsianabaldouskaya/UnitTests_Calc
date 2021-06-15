@@ -4,34 +4,26 @@ using System;
 namespace NUnitTestProject1
 {
     [TestFixture]
-    public class SqrtTests
+    public class SqrtTests:BaseTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void SqrtOfPositiveNumberTest()
         {
             object number = "4";
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(2, calc.Sqrt(number));
+            Assert.AreEqual(2, calc.Sqrt(number), "Sqrt is incorrect");
         }
 
         [Test]
         public void SqrtOfZeroTest()
         {
             var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(0, calc.Sqrt(0));
+            Assert.AreEqual(0, calc.Sqrt(0), "Sqrt is incorrect");
         }
 
         [Test]
         public void SqrtOfNegativeNumberImpossibleTest()
         {
-            var calc = new CSharpCalculator.Calculator();
             Assert.Throws<NotFiniteNumberException>(() => calc.Sqrt(-4));
-
         }
     }
 }

@@ -1,16 +1,16 @@
 using NUnit.Framework;
 using System;
+using CSharpCalculator;
 
 namespace NUnitTestProject1
 {
     [TestFixture]
-    public class ABSTests
+    public class ABSTests:BaseTest
     {           
         [SetUp]
         public void Setup()
         {
-            System.Console.WriteLine("Starting ABS tests");  
-           
+            System.Console.WriteLine("Starting ABS tests");           
         }
 
         [TearDown]
@@ -19,31 +19,24 @@ namespace NUnitTestProject1
             System.Console.WriteLine("ABS tests are finished");
         }
 
-
         [Test]
         [TestCase(-4)]
         public void ABSNegativeNumberTest(double negativeNumber)
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(-negativeNumber, calc.Abs(negativeNumber));
-
+            Assert.AreEqual(-negativeNumber, calc.Abs(negativeNumber), "ABS is incorrect");
         }
 
         [Test]
         [TestCase(4)]
         public void ABSPositiveNumberTest(double positiveNumber)
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(positiveNumber, calc.Abs(positiveNumber));
+            Assert.AreEqual(positiveNumber, calc.Abs(positiveNumber), "ABS is incorrect");
         }
 
         [Test]
         public void ABSZeroTest()
         {
-            var calc = new CSharpCalculator.Calculator();
-            Assert.AreEqual(0, calc.Abs(0));
-
+            Assert.AreEqual(0, calc.Abs(0), "ABS is incorrect");
         }
-
     }
 }
