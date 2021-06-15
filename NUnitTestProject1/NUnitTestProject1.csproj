@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Reference Include="Calculator1">
-      <HintPath>..\..\UnitTestProject1\Calculator1.dll</HintPath>
+      <HintPath>..\Calculator1.dll</HintPath>
     </Reference>
   </ItemGroup>
 

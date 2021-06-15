@@ -30,8 +30,7 @@ namespace NUnitTestProject1
         public void SqrtOfNegativeNumberImpossibleTest()
         {
             var calc = new CSharpCalculator.Calculator();
-            object a = calc.Sqrt(-4);
-            Assert.Throws<NotFiniteNumberException>((TestDelegate)a);
+            Assert.Throws<NotFiniteNumberException>(() => calc.Sqrt(-4));
 
         }
     }
