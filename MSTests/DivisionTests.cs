@@ -6,7 +6,7 @@ namespace MSTests
     [TestClass]
     public class DivisionTests:BaseTest
     {
-        //protected TestContext context;
+        protected TestContext context;
 
         //public TestContext TestContext
         //{
@@ -32,7 +32,7 @@ namespace MSTests
         //public void DivisionTest()
         //{
 
-        //    Assert.AreEqual(["dividend"]/ context.DataRow["divider"], calc.Divide("", ""), "Div is incorrect");
+        //    Assert.AreEqual(["dividend"] / context.DataRow["divider"], calc.Divide("", ""), "Div is incorrect");
         //}
 
         [TestMethod]
