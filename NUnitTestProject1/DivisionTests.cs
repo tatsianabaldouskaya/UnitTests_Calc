@@ -3,6 +3,7 @@
 namespace NUnitTestProject1
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class DivisionTests : BaseTest
     {
         [SetUp]

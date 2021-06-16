@@ -5,6 +5,7 @@ using CSharpCalculator;
 namespace NUnitTestProject1
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class ABSTests:BaseTest
     {           
         [SetUp]

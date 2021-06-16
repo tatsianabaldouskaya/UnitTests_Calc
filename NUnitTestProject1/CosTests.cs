@@ -4,6 +4,7 @@ using System;
 namespace NUnitTestProject1
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class CosTests:BaseTest
     {
         [SetUp]

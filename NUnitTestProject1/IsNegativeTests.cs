@@ -3,6 +3,7 @@ using NUnit.Framework;
 namespace NUnitTestProject1
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Fixtures)]
     public class IsNegativeTests:BaseTest
     {
        [Test]
